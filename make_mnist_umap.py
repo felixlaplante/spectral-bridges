@@ -93,6 +93,7 @@ fig_SBumap = create_scatter_plot(df_SBumap, show_legend=False)
 fig_KMumap = create_scatter_plot(df_KMumap, show_legend=False)
 
 # Save the plots to pdf files
-pio.write_image(fig_GTumap, 'GTumap.png', format='png', scale=2)
-pio.write_image(fig_SBumap, 'SBumap.png', format='png', scale=2)
-pio.write_image(fig_KMumap, 'KMumap.png', format='png', scale=2)
+pio.kaleido.scope.mathjax = None
+pio.write_image(fig_GTumap, 'GTumap.pdf', format='pdf')
+pio.write_image(fig_SBumap, 'SBumap.pdf', format='pdf')
+pio.write_image(fig_KMumap, 'KMumap.pdf', format='pdf')
