@@ -1,3 +1,1 @@
-To reproduce scripts in this directory for the preprint, please use version pip install spectral-bridges==0.2.2. Some results might be slightly different as of version 1.0.0, but the algorithm is much more optimized.
-
-Highly optimized using FAISS
+This repository is aivable to reproduce the results in the Computo paper.
