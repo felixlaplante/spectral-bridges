@@ -134,6 +134,13 @@ for file in files:
 
     results["SpectralBridges"][file] = {"ARI": sb_ari, "NMI": sb_nmi}
 
+# Print results, to make a table later on
+print()
+for method in results:
+    for file in files:
+        print("ARI", method, file, results[method][file]["ARI"].mean())
+        print("NMI", method, file, results[method][file]["NMI"].mean())
+
 # Define files, methods, and metrics
 file_labels = ["Impossible", "Moons", "Circles", "Smile"]
 methods = [
@@ -212,7 +219,7 @@ for i, file in enumerate(file_labels, start=1):
 
 fig.update_layout(
     plot_bgcolor='whitesmoke',
-    height=1600,
+    height=1000,
     width=1200,
     title_text="",
     showlegend=False,

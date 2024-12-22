@@ -108,6 +108,13 @@ for file in files:
     results["GIT"][file] = {"ARI": git_ari, "NMI": git_nmi}
 
     results["SpectralBridges"][file] = {"ARI": sb_ari, "NMI": sb_nmi}
+    
+# Print results, to make a table later on
+print()
+for method in results:
+    for file in files:
+        print("ARI", method, file, results[method][file]["ARI"].mean())
+        print("NMI", method, file, results[method][file]["NMI"].mean())
 
 # Define files, methods, and metrics
 file_labels = ["UCI Breast Cancer"]
